@@ -1,16 +1,21 @@
 import Searchbar from "./Searchbar";
-import BookData from "../mock-data.json";
+import styled from "styled-components";
+
+const Homebar = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: #ffc3f4;
+  width: 100vw;
+  height: 4rem;
+  padding: 1rem;
+`;
 
 function Navbar(props) {
   return (
-    <div>
-      <div>
-        <Searchbar
-          placeholder="Title, author, keyword or ISBN"
-          data={BookData}
-        />
-      </div>
-    </div>
+    <Homebar>
+      <Searchbar placeholder="Title, author or keyword" />
+    </Homebar>
   );
 }
 
